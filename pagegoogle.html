@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <title>Google.fr</title>
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
 </head>
 <body>
     <div class="haut">
@@ -16,12 +15,11 @@
     </div>
     <div class="centre">
         <img class="logoGoogle" src="google.png">
-        <form>
-            <input class="champDeRecherche" type="text">
-        </form>
+            <input id="champDeRecherche" type="text">
+
         <div class="button">
-            <button>Recherche Google</button>
-            <button>J'ai de la Chance</button>
+            <button id ="rechercher">Recherche Google</button>
+            <button id ="GDLA">J'ai de la Chance</button>
         </div>
     </div>
     <div class="bas">
@@ -43,4 +41,18 @@
         </div>
     </div>
 </body>
+<script>
+    function googleSearch(){
+        var text = document.getElementById("champDeRecherche").value;
+        window.open(`https://www.google.com/search?q=${text}&ie=utf-8&oe=utf-8`);
+    }
+    function qwantSearch(){
+        var text = document.getElementById("champDeRecherche").value;
+        window.open(`https://www.qwant.com/?client=brz-&q=${text}`);
+    } 
+    var google = document.getElementById("rechercher")
+    var qwant = document.getElementById("GDLA")
+    google.addEventListener("click",googleSearch, false)
+    qwant.addEventListener("click",qwantSearch, false)
+    </script>
 </html>

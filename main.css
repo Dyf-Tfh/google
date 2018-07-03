@@ -28,12 +28,12 @@ body
     align-items: center;
     margin: auto;
 }
-/*.bas
+.bas
 {
-    display. flex;
-    flex-direction:column
+    background-color: #f2f2f2;
+    
 }
-*/
+
 .basDuBas
 {
     display: flex;
@@ -67,7 +67,7 @@ a:hover
 {
     text-decoration: underline;
 }
-.champDeRecherche
+#champDeRecherche
 {
     min-width: 500px;
     margin-top: 2em;
